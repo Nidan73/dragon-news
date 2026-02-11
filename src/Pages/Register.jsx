@@ -12,7 +12,7 @@ const Register = () => {
     const password = form.password.value;
     newUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
       })
       .catch((error) => {
         setError(error.message);

@@ -7,7 +7,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+  // console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
