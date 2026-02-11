@@ -2,10 +2,19 @@
 import React from "react";
 import { FaRegBookmark, FaShareAlt, FaEye, FaStar } from "react-icons/fa";
 import { format } from "date-fns";
+import { Link } from "react-router";
 
 const News = ({ news }) => {
-  const { title, rating, total_view, author, thumbnail_url, tags, details } =
-    news;
+  const {
+    id,
+    title,
+    rating,
+    total_view,
+    author,
+    thumbnail_url,
+    tags,
+    details,
+  } = news;
 
   const published = author?.published_date
     ? format(new Date(author.published_date), "yyyy-MM-dd")
@@ -84,7 +93,8 @@ const News = ({ news }) => {
         <p className="mt-2 text-sm">{shortDetails}</p>
 
         <button className="btn btn-link px-0 text-error w-fit">
-          Read More
+          {" "}
+          <Link to={`/news/${id}`}>Read More</Link>
         </button>
 
         <div className="divider my-2" />

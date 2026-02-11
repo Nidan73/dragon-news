@@ -7,7 +7,6 @@ import {
   signOut,
 } from "firebase/auth";
 import { app } from "../Firebase/firebase.config";
-import { useNavigate } from "react-router";
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
