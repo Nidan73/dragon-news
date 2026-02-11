@@ -9,7 +9,8 @@ const CategoryNews = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
     if (id == "0") {
-      return setNews(newsData);
+      setNews(newsData);
+      return;
     } else if (id == "1") {
       const filteredNews = newsData.filter(
         (news) => news.others.is_trending === true,
