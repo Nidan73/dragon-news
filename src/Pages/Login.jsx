@@ -14,7 +14,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     signInuser(email, password)
-      .then((result) => navigate(location?.state || "/"))
+      .then(() => navigate(location?.state || "/"))
       .catch((error) => {
         setError(error.message);
       });
