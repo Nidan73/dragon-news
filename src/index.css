@@ -24,3 +24,7 @@
 a.active {
   @apply bg-base-300;
 }
+
+.label {
+  @apply font-bold text-primary;
+}

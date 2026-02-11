@@ -1,6 +1,13 @@
-import { NavLink } from "react-router";
-import user from "../assets/user.png";
+import { Link, NavLink } from "react-router";
+import user1 from "../assets/user.png";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthProvider";
 const NavBar = () => {
+  const { user, userOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    userOut();
+  };
   return (
     <div className="flex mt-4 justify-between">
       <div></div>
@@ -10,8 +17,17 @@ const NavBar = () => {
         <NavLink to="/career">Career</NavLink>
       </div>
       <div className="flex gap-5">
-        <img src={user} alt="" />
-        <button className="btn btn-primary px-5">login</button>
+        <img src={user1} alt="" />
+
+        {user ? (
+          <button onClick={handleSignOut} className="btn btn-primary px-5">
+            Log Out
+          </button>
+        ) : (
+          <Link to="/auth/login" className="btn btn-primary px-5">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

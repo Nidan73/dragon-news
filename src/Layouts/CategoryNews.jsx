@@ -5,7 +5,7 @@ import News from "../Components/News";
 const CategoryNews = () => {
   const { id } = useParams();
   const newsData = useLoaderData();
-  console.log(newsData);
+  // console.log(newsData);
   const [news, setNews] = useState([]);
   useEffect(() => {
     if (id == "0") {
