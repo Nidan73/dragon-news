@@ -1,0 +1,18 @@
+import React from "react";
+import classes from "../assets/class.png";
+import swimming from "../assets/swimming.png";
+import playground from "../assets/playground.png";
+const Qzone = () => {
+  return (
+    <div className="mt-3 bg-base-200">
+      <h2 className="font-bold">Q-zone</h2>
+      <div>
+        <img className="" src={playground} alt="" />
+        <img className="" src={classes} alt="" />
+        <img className="" src={swimming} alt="" />
+      </div>
+    </div>
+  );
+};
+
+export default Qzone;
